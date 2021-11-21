@@ -1,0 +1,21 @@
+#:kivy 1.0.7
+#:import menu menu
+MainWidget:
+
+<MainWidget>:
+    canvas.before:
+        Rectangle:
+            size: self.size
+            source: 'images/background.jpg'
+            
+    menu_button: menu_button
+    perspective_point_x: self.width / 2
+    perspective_point_y: self.height * 0.75
+    MenuWidget:
+        id: menu_button
+    Label:
+        text: root.score_txt
+        font_name: 'fonts/VarinonormalRegular-1GXaM.ttf'
+        font_size: dp(30)
+        size_hint: .18, .18
+        pos_hint: { "x": 0, "top": 1}
